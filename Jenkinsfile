@@ -12,5 +12,10 @@ node {
  {
   sh '''mvn package '''
  }
+
+ stage('list env varibles')
+ {
+  sh '''echo currentBuild.number '''
+ }
    
 }
