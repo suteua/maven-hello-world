@@ -24,7 +24,7 @@ node {
   echo "${currentBuild.startTimeInMillis}" 
   echo "Curent build number is: ${currentBuild.number}"
     echo "Curent build result is: ${currentBuild.result}"
- 
+  echo "change set is : ${currentBuild.changeSets}" 
 }
    
 }
