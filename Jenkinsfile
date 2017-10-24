@@ -39,6 +39,8 @@ node {
  echo getChangeString()
  }
 
+}
+
 @NonCPS
 def getChangeString() {
  MAX_MSG_LEN = 100
@@ -61,4 +63,3 @@ def getChangeString() {
  return changeString
  }
   
-}
