@@ -26,5 +26,10 @@ node {
     echo "Curent build result is: ${currentBuild.result}"
   echo "change set is : ${currentBuild.changeSets}" 
 }
+
+ stage('build')
+ {
+  sh 'printenv'
+ }
    
 }
