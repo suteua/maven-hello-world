@@ -25,7 +25,7 @@ node {
 
  stage('Parsing project pom.xml')
  {
-  echo "Parsing" 
- }
-   
+ 
+  def pom = readMavenPom file: 'pom.xml'
+ }  
 }
