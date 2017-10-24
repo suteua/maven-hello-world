@@ -29,5 +29,6 @@ node {
   def pom = readMavenPom file: 'pom.xml'
    echo "${pom.packaging}"
    echo "${pom.version}"
+   echo "${pom.artifactId}"
  }  
 }
