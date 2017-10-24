@@ -21,7 +21,7 @@ node {
 
  stage('curentBuild')
  {
-  echo ${curentBuild.result}
+  echo "${currentBuild.startTimeInMillis}" 
  }
    
 }
