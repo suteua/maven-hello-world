@@ -1,13 +1,15 @@
 node {
+ 
  stage('Checkout') 
  {   
     checkout scm; 
  }
+
  stage('list env varibles')
  {
   echo "${env.BRANCH_NAME}"
   echo "${env.GIT_COMMIT}"
-}
+ }
 
  stage('curentBuild')
  {
@@ -15,7 +17,7 @@ node {
   echo "Curent build number is: ${currentBuild.number}"
     echo "Curent build result is: ${currentBuild.result}"
   echo "change set is : ${currentBuild.changeSets}" 
-}
+ }
 
  stage('build')
  {
@@ -31,8 +33,6 @@ node {
    echo "${pom.version}"
    echo "${pom.artifactId}"
  }
-
-}
 
  stage('Change set')
  {
@@ -59,6 +59,6 @@ def getChangeString() {
  changeString = " - No new changes"
  }
  return changeString
-}
+ }
   
-
+}
