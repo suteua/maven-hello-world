@@ -3,16 +3,6 @@ node {
  {   
     checkout scm; 
  }
- stage('MVN clean and validate') 
- {
-  sh '''mvn clean validate '''     
- }
-
-  stage('Create package')
- {
-  sh '''mvn package '''
- }
-
  stage('list env varibles')
  {
   echo "${env.BRANCH_NAME}"
@@ -34,8 +24,8 @@ node {
  }
 
  stage('Parsing project pom.xml')
- { 
-  def pom = readMavenPom file: 'pom.xml'
+ {
+  echo "Parsing" 
  }
    
 }
