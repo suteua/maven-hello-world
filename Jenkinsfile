@@ -15,7 +15,7 @@ node {
 
  stage('list env varibles')
  {
-  sh '''echo ${env.BRANCH_NAME} '''
+  echo '${env.BRANCH_NAME}'
  }
    
 }
