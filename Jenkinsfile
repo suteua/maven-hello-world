@@ -7,5 +7,10 @@ node {
  {
   sh '''mvn clean validate '''     
  }
+
+  stage('Create package')
+ {
+  sh '''mvn package '''
+ }
    
 }
