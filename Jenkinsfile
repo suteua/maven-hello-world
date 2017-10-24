@@ -15,7 +15,7 @@ node {
 
  stage('list env varibles')
  {
-  sh '''echo currentBuild.number '''
+  sh '''echo ${currentBuild.number} '''
  }
    
 }
