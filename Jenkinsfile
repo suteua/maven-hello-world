@@ -36,8 +36,6 @@ node {
  stage('Parsing project pom.xml')
  { 
   def pom = readMavenPom file: 'pom.xml'
-   echo "${pom.packaging}"
-   echo "${pom.version}"
  }
    
 }
