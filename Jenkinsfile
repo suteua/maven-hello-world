@@ -17,7 +17,6 @@ node {
  {
   echo "${env.BRANCH_NAME}"
   echo "${env.GIT_COMMIT}"
-  echo "${POM_ARTIFACTID}" 
 }
 
  stage('curentBuild')
@@ -32,6 +31,13 @@ node {
  {
   sh 'printenv'
   
+ }
+
+ stage('Parsing project pom.xml')
+ { 
+  def pom = readMavenPom file: 'pom.xml'
+  packaging: "${pom.packaging}"
+  version: "${pom.version}"
  }
    
 }
