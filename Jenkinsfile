@@ -17,7 +17,8 @@ node {
  {
   echo "${env.BRANCH_NAME}"
   echo "${env.GIT_COMMIT}"
- }
+  echo "${POM_ARTIFACTID}" 
+}
 
  stage('curentBuild')
  {
@@ -30,6 +31,7 @@ node {
  stage('build')
  {
   sh 'printenv'
+  
  }
    
 }
