@@ -1,4 +1,7 @@
 node {
+
+ def mvnHome = tool 'M3'
+ def mvnCmd="${mvnHome}/bin/mvn -s /var/jenkins_home/maven-global-settings-files.xml"
  
  stage('Checkout') 
  {   
