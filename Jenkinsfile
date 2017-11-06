@@ -25,14 +25,14 @@ node {
   
  }
 
- stage('Parsing project pom.xml')
- {
+// stage('Parsing project pom.xml')
+// {
  
-  def pom = readMavenPom file: 'pom.xml'
-   echo "${pom.packaging}"
-   echo "${pom.version}"
-   echo "${pom.artifactId}"
- }
+//  def pom = readMavenPom file: 'pom.xml'
+ //  echo "${pom.packaging}"
+//   echo "${pom.version}"
+//   echo "${pom.artifactId}"
+//  }
 
   stage('SonarQube analysis') {
     withSonarQubeEnv('localhost-sonar') {
