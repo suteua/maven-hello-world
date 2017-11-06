@@ -17,7 +17,7 @@ node {
  stage('curentBuild')
  {
  
-  sh '${mvnCmd} compile'
+  sh "${mvnCmd} clean compile"
  }
 
  stage('build')
