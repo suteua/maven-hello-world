@@ -14,7 +14,7 @@ node {
  stage('curentBuild')
  {
  
-  sh 'mvn clean'
+  sh '${mvnCmd} install'
  }
 
  stage('build')
