@@ -35,7 +35,7 @@ node {
 //  }
 
   stage('SonarQube analysis') {
-    withSonarQubeEnv('localhost-sonar') {
+    withSonarQubeEnv('SonarQube') {
       // requires SonarQube Scanner for Maven 3.2+
       sh 'mvn sonar:sonar'
     }
